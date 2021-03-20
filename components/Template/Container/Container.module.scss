@@ -1,0 +1,18 @@
+/***** ========== *****/
+/***** CONTAINER  *****/
+/***** ========== *****/
+.container {
+	max-width: 1450px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 35px;
+	box-sizing: border-box;
+	position: relative;
+
+	&.flex{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+}

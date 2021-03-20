@@ -1,0 +1,51 @@
+@import "@styles/vars.scss";
+@import "@styles/mixins.scss";
+
+
+.header{
+	width: 100%;
+	background-color:$nasa_grey;
+}
+
+
+.container{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;;
+
+}
+
+$static_width: 500px;
+
+.contentLeft{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: $static_width;
+
+	.logo{
+		@include flex_center;
+		padding: 10px;
+		margin-right: 30px;
+		border: none;
+	}
+
+	.title{
+		@include flex_center;
+		position: relative;
+		bottom: -5px;
+
+	}
+}
+
+.contentRight{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: calc(100% - $static_width);
+}

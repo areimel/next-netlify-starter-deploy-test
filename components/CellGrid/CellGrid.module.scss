@@ -1,0 +1,35 @@
+@import "@styles/vars.scss";
+@import "@styles/mixins.scss";
+
+
+/**************************************************
+Holy Mountain Framework Component
+
+
+Component Name: 	CellGrid
+Descriptionm:		
+
+
+**************************************************/
+
+.cellGrid{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	.cell{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.inner{
+			background-color: $white;
+			color: $black;
+			padding: 15px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			flex-direction: column;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}

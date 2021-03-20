@@ -1,0 +1,120 @@
+@import "@styles/vars.scss";
+@import "@styles/mixins.scss";
+
+
+/**************************************************
+Holy Mountain Framework Component
+
+
+Component Name: 	FixedSplit
+Descriptionm:		
+
+
+**************************************************/
+	.cellWrapper{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+
+		@media only screen and (max-width : 900px) {
+			flex-direction: column;
+		}
+
+		/* Set static width here, override in style.css file */
+		$static_width: 800px;
+		.cell{			
+			padding: 100px 35px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			//border: 1px dotted #000;
+
+			&.fixedWidth{
+				position: relative;
+			}
+
+			&.staticWidth{
+				position: relative;
+			}
+		}
+
+		.inner{
+			width: 100%;
+			max-width: 650px;
+			background-color: rgba(200,200,200,0.8);
+			backdrop-filter: blur(5px);
+			padding: 35px 50px;
+		}
+	}
+
+
+	/***** static size: this class styles the div with a fixed pixel size  *****/
+		.-hm_layout_1>.static_size{
+			width: var(--static_width); /* sets the static size */
+		}
+
+		.-hm_layout_1>.static_size>.inner{
+			width: 100%;
+			max-width: 650px;
+			background-color: #ececec;
+			padding: 35px 50px;
+		}
+		
+		
+
+		.-hm_layout_1>.static_size>.inner>.headline{
+			/*margin-bottom: 15px;*/
+		}
+		.-hm_layout_1>.static_size>.inner>.body{
+			margin: 15px 0;
+		}
+
+		/***** first/last of type modifiers *****/
+			.-hm_layout_1>.static_size:first-of-type>{
+				/* when element is on the left side */
+			}
+			.-hm_layout_1>.static_size:last-of-type>{
+				/* when element is on the right side */
+			}
+
+		/***** first/last of type modifiers *****/
+			.-hm_layout_1>.static_size:first-of-type>{
+				/* when element is on the left side */
+			}
+			.-hm_layout_1>.static_size:last-of-type>{
+				/* when element is on the right side */
+			}
+
+	/***** dynamic size: this class styles the div that fills the remaining space  *****/
+		.-hm_layout_1>.dynamic_size{
+			width: calc(100% - var(--static_width)); /* sets the dynamic size */
+
+		}
+		.-hm_layout_1>.dynamic_size>.inner{
+			width: 100%;
+			max-width: 650px;
+			background-color: #ececec;
+			padding: 35px 50px;
+		}
+		
+		
+
+		.-hm_layout_1>.dynamic_size>.inner>.headline{
+			/*margin-bottom: 15px;*/
+		}
+		.-hm_layout_1>.dynamic_size>.inner>.body{
+			margin: 15px 0;
+		}
+
+		/***** first/last of type modifiers *****/
+			.-hm_layout_1>.dynamic_size:first-of-type>{
+				/* when element is on the left side */
+			}
+			.-hm_layout_1>.dynamic_size:last-of-type>{
+				/* when element is on the right side */
+			}
+		

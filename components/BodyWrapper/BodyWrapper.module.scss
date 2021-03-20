@@ -1,0 +1,44 @@
+@import "@styles/vars.scss";
+@import "@styles/mixins.scss";
+
+
+/**************************************************
+Holy Mountain Framework Component
+
+
+Component Name: 	BodyWrapper
+Description:		
+
+
+**************************************************/
+.bodyWrapper{
+	z-index: 100;
+	background-color: var(--white_1);
+	transition:.5s ease-in-out;
+	transform-origin: center;
+	perspective-origin: center;
+	transform: none;
+	perspective: 800px;
+	overflow-x: hidden;
+
+	/***** ============= *****/
+	/***** 3D Transforms *****/
+	/***** ============= *****/
+	&[data-body-transform="body_transform_1"]{
+		transform: translate3d(0px,0px,0px) scale(0.90);
+		box-shadow: 5px 5px 15px 15px rgba(0,0,0,0.5);
+		pointer-events: none;
+	}
+	&[data-body-transform="body_transform_2"]{
+		transform: translate3d(-300px,400px,0px) scale(0.80);
+		box-shadow: 5px 5px 15px 15px rgba(0,0,0,0.5);
+		pointer-events: none;
+	}
+	&[data-body-transform="body_transform_3"]{
+		transform: translate3d(-350px,0,0) rotateX(15deg) rotateY(25deg) scale(0.95);
+		box-shadow: 5px 5px 15px 15px rgba(0,0,0,0.5);
+		pointer-events: none;
+	}
+
+}
+
